@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Norteño</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #000000;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .hero {
+            background-image: url('hero-background.jpg'); /* Cambiar a la ruta de la imagen */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .menu-section {
+            padding: 2rem 1rem;
+        }
+        .menu-title {
+            font-weight: bold;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .about-section {
+            padding: 2rem 1rem;
+            background-color: #f9f9f9;
+        }
+        .about-title {
+            font-weight: bold;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+        .platos-del-dia {
+            padding: 2rem 1rem;
+        }
+        .platos-title {
+            font-weight: bold;
+            border-bottom: 2px solid #000;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Il Norteño</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#platos">Platos del Día</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="text-center">
+            <a class="navbar-brand" href="#"> <img src="/assets/img/plato1.jpg" alt="" width="100%" height="auto"></a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="about-title">Quiénes Somos</h2>
+            <p>En <strong>Il Norteño</strong>, nos apasiona traer los sabores auténticos del norte a tu mesa. Nuestro restaurante combina ingredientes frescos y naturales con un toque de elegancia y tradición. Cada plato cuenta una historia, y cada experiencia está diseñada para conectar a nuestros comensales con la riqueza cultural y gastronómica de nuestra tierra.</p>
+            <p>Creemos en la sostenibilidad, el respeto por la naturaleza y en brindar un servicio de excelencia. Ven y descubre un lugar donde la tradición se encuentra con la modernidad.</p>
+            <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/assets/img/plato1.jpg" class="d-block w-100" alt="Foto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/plato2.jpg" class="d-block w-100" alt="Foto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/plato3.jpg" class="d-block w-100" alt="Foto 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="menu-title">Menú</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Entradas</h5>
+                    <ul>
+                        <li>
+                            <img src="/assets/img/plato1.jpg" alt="Ensalada" style="width: 50px; margin-right: 10px;"> Ensalada fresca de la casa
+                        </li>
+                        <li>
+                            <img src="/assets/img/plato1.jpg" alt="Empanadas" style="width: 50px; margin-right: 10px;"> Empanadas de carne norteñas
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Principales</h5>
+                    <ul>
+                        <li>
+                            <img src="/assets/img/plato1.jpg" alt="Asado" style="width: 50px; margin-right: 10px;"> Asado especial
+                        </li>
+                        <li>
+                            <img src="/assets/img/plato1.jpg" alt="Cazuela" style="width: 50px; margin-right: 10px;"> Cazuela de cordero
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="platos-del-dia">
+        <div class="container">
+            <h2 class="platos-title">Platos del Día</h2>
+            <div id="platosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="/assets/img/plato1.jpg" class="d-block w-100" alt="Plato 1">
+                                <p>Asado Especial - $1200</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="/assets/img/plato1.jpg" class="d-block w-100" alt="Plato 3">
+                                <p>Empanadas Norteñas - $500</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#platosCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#platosCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+ <!-- Reservas Section -->
+ <section id="reservas" class="reservas-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Reserva tu Mesa</h2>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="col-md-6">
+                <label for="comensales" class="form-label">Cantidad de Comensales</label>
+                <input type="number" class="form-control" id="comensales" min="1" max="20" required>
+            </div>
+            <div class="col-12">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
+            </div>
+            <div class="col-12">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Tu Teléfono" required>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-dark w-100">Reservar</button>
+            </div>
+        </form>
+    </div>
+</section>
+   <!-- Reseñas Section -->
+   <section id="reseñas" class="reseñas-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Reseñas de Nuestros Clientes</h2>
+        <form class="mb-4">
+            <div class="mb-3">
+                <label for="nombreUsuario" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="comentario" class="form-label">Tu comentario</label>
+                <textarea class="form-control" id="comentario" rows="4" placeholder="Escribe tu reseña aquí" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="puntuacion" class="form-label">Puntuación</label>
+                <select class="form-select" id="puntuacion" required>
+                    <option value="" disabled selected>Selecciona una puntuación</option>
+                    <option value="1">1 - Muy Malo</option>
+                    <option value="2">2 - Malo</option>
+                    <option value="3">3 - Regular</option>
+                    <option value="4">4 - Bueno</option>
+                    <option value="5">5 - Excelente</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-dark">Enviar Reseña</button>
+        </form>
+        <div id="reseñasMostradas">
+            <div class="reseña mb-3">
+                <p><strong>Juan Pérez:</strong> Excelente servicio y comida deliciosa. 🌟🌟🌟🌟🌟</p>
+            </div>
+            <div class="reseña mb-3">
+                <p><strong>María López:</strong> Me encantó el ambiente, súper recomendable. 🌟🌟🌟🌟</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Footer Section -->
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center mb-3">
+                <h5>Redes Sociales</h5>
+                <a href="#" class="text-white me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-2" aria-label="X"><i class="bi bi-twitter"></i></a>
+            
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <h5>Teléfono</h5>
+                <p><i class="bi bi-telephone"></i> +54 9 1234 567890</p>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <h5>Ubicación</h5>
+                <p><i class="bi bi-geo-alt"></i> Calle Ficticia 123, Ciudad, País</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
