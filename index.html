@@ -296,11 +296,12 @@
         </form>
     </div>
 </section>
-   <!-- Reseñas Section -->
-   <section id="reseñas" class="reseñas-section py-5 bg-light">
+
+<!-- Reseñas Section -->
+<section id="reseñas" class="reseñas-section py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-4">Reseñas de Nuestros Clientes</h2>
-        <form class="mb-4">
+        <form id="formularioReseña" class="mb-4">
             <div class="mb-3">
                 <label for="nombreUsuario" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu nombre" required>
@@ -323,15 +324,64 @@
             <button type="submit" class="btn btn-dark">Enviar Reseña</button>
         </form>
         <div id="reseñasMostradas">
-            <div class="reseña mb-3">
-                <p><strong>Juan Pérez:</strong> Excelente servicio y comida deliciosa. 🌟🌟🌟🌟🌟</p>
-            </div>
-            <div class="reseña mb-3">
-                <p><strong>María López:</strong> Me encantó el ambiente, súper recomendable. 🌟🌟🌟🌟</p>
-            </div>
+            <!-- Las reseñas se agregarán aquí dinámicamente -->
         </div>
     </div>
 </section>
+
+<script>
+    // Función para cargar las reseñas del localStorage al cargar la página
+    function cargarReseñas() {
+        const reseñasGuardadas = JSON.parse(localStorage.getItem('reseñas')) || [];
+        const contenedorReseñas = document.getElementById('reseñasMostradas');
+        contenedorReseñas.innerHTML = ''; // Limpiar contenido anterior
+
+        // Crear y mostrar cada reseña guardada
+        reseñasGuardadas.forEach(function(reseña) {
+            const nuevaReseña = document.createElement('div');
+            nuevaReseña.classList.add('reseña', 'mb-3');
+            nuevaReseña.innerHTML = `<p><strong>${reseña.nombre}:</strong> ${reseña.comentario} ${'🌟'.repeat(reseña.puntuacion)}</p>`;
+            contenedorReseñas.appendChild(nuevaReseña);
+        });
+    }
+
+    // Cargar las reseñas al cargar la página
+    window.onload = cargarReseñas;
+
+    // Manejar el envío del formulario
+    document.getElementById('formularioReseña').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+
+        // Obtener los valores del formulario
+        const nombre = document.getElementById('nombreUsuario').value;
+        const comentario = document.getElementById('comentario').value;
+        const puntuacion = document.getElementById('puntuacion').value;
+
+        // Crear un objeto de reseña
+        const nuevaReseña = {
+            nombre: nombre,
+            comentario: comentario,
+            puntuacion: parseInt(puntuacion)
+        };
+
+        // Obtener las reseñas existentes o crear un array vacío
+        const reseñasGuardadas = JSON.parse(localStorage.getItem('reseñas')) || [];
+
+        // Agregar la nueva reseña al array
+        reseñasGuardadas.push(nuevaReseña);
+
+        // Guardar el array actualizado en el localStorage
+        localStorage.setItem('reseñas', JSON.stringify(reseñasGuardadas));
+
+        // Limpiar el formulario
+        document.getElementById('formularioReseña').reset();
+
+        // Recargar las reseñas para mostrar la nueva
+        cargarReseñas();
+    });
+</script>
+
+
 <!--Galeria section-->
 <section class="gallery-section">
     <h1>Galería de Fotos</h1>
