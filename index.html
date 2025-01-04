@@ -116,6 +116,69 @@
             display: inline-block;
             margin-bottom: 1rem;
         }
+        .gallery-section {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .gallery-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #4CAF50; /* Verde */
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item .overlay span {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .row {
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -205,42 +268,7 @@
         </div>
     </section>
 
-    <!-- Carousel Section -->
-    <section class="platos-del-dia">
-        <div class="container">
-            <h2 class="platos-title">Platos del Día</h2>
-            <div id="platosCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-6 text-center">
-                                <img src="/assets/img/plato1.jpg" class="d-block w-100" alt="Plato 1">
-                                <p>Asado Especial - $1200</p>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-6 text-center">
-                                <img src="/assets/img/plato1.jpg" class="d-block w-100" alt="Plato 3">
-                                <p>Empanadas Norteñas - $500</p>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#platosCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#platosCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
+   
  <!-- Reservas Section -->
  <section id="reservas" class="reservas-section py-5">
     <div class="container">
@@ -304,7 +332,68 @@
         </div>
     </div>
 </section>
-
+<!--Galeria section-->
+<section class="gallery-section">
+    <h1>Galería de Fotos</h1>
+    <div class="container">
+        <div class="row">
+            <!-- Foto 1 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <img src="/assets/img/plato3.jpg" alt="Foto 1">
+                    <div class="overlay">
+                        <span>Foto 1</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Foto 2 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <img src="/assets/img/plato3.jpg" alt="Foto 2">
+                    <div class="overlay">
+                        <span>Foto 2</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Foto 3 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <img src="/assets/img/plato3.jpg" alt="Foto 3">
+                    <div class="overlay">
+                        <span>Foto 3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Foto 4 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <img src="/assets/img/plato3.jpg" alt="Foto 4">
+                    <div class="overlay">
+                        <span>Foto 4</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Foto 5 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <img src="/assets/img/plato3.jpg" alt="Foto 5">
+                    <div class="overlay">
+                        <span>Foto 5</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Foto 6 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <img src="/assets/img/plato3.jpg" alt="Foto 6">
+                    <div class="overlay">
+                        <span>Foto 6</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
   <!-- Footer Section -->
   <footer class="footer bg-dark text-white py-4">
     <div class="container">
