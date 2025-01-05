@@ -120,65 +120,41 @@
             background-color: #000;
             color: #fff;
             padding: 40px 20px;
+            text-align: center;
         }
 
         .gallery-section h1 {
             font-size: 2.5em;
             margin-bottom: 30px;
-            text-align: center;
             color: #4CAF50; /* Verde */
         }
 
         .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            border-radius: 10px;
-        }
-
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-
-        .gallery-item .overlay span {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            color: #fff;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .row {
-            justify-content: center;
-        }
+        position: relative;
+        overflow: hidden;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+    .overlay {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #fff;
+        opacity: 0; /* Oculto por defecto */
+        transition: opacity 0.3s ease; /* Transición suave */
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .gallery-item:hover .overlay {
+        opacity: 1; /* Visible al hacer hover */
+    }
     </style>
 </head>
 <body>
@@ -200,8 +176,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#platos">Piatti del giorno </a>
                     </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery"> Galleria</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contatto</a>
+
                     </li>
                 </ul>
             </div>
@@ -415,14 +396,14 @@ Teléfono: ${telefono}
 
 
 <!--Galeria section-->
-<section class="gallery-section">
+<section class="gallery-section" id="gallery">
     <h1>Galería de Fotos</h1>
     <div class="container">
         <div class="row">
             <!-- Foto 1 -->
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <img src="/assets/img/asperil.png" alt="aperol spritz">
+                    <img src="/assets/img/asperil.png" alt="aperol spritz" data-bs-target="#galleryCarousel" data-bs-slide-to="0" data-bs-toggle="modal">
                     <div class="overlay">
                         <span>Aperol Spritz</span>
                     </div>
@@ -431,69 +412,112 @@ Teléfono: ${telefono}
             <!-- Foto 2 -->
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <img src="/assets/img/plato3.jpg" alt="Foto 2">
+                    <img src="/assets/img/2.png" alt="Gin Tonic" data-bs-target="#galleryCarousel" data-bs-slide-to="1" data-bs-toggle="modal">
                     <div class="overlay">
-                        <span>Foto 2</span>
+                        <span>Gin Tonic</span>
                     </div>
                 </div>
             </div>
-            <!-- Foto 3 -->
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <img src="/assets/img/plato3.jpg" alt="Foto 3">
+                    <img src="/assets/img/3.png" alt="aperol spritz" data-bs-target="#galleryCarousel" data-bs-slide-to="0" data-bs-toggle="modal">
                     <div class="overlay">
-                        <span>Foto 3</span>
+                        <span>Aperol Spritz</span>
                     </div>
                 </div>
             </div>
-            <!-- Foto 4 -->
+            <!-- Foto 2 -->
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <img src="/assets/img/plato3.jpg" alt="Foto 4">
+                    <img src="/assets/img/4.png" alt="Gin Tonic" data-bs-target="#galleryCarousel" data-bs-slide-to="1" data-bs-toggle="modal">
                     <div class="overlay">
-                        <span>Foto 4</span>
+                        <span>Gin Tonic</span>
                     </div>
                 </div>
             </div>
-            <!-- Foto 5 -->
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <img src="/assets/img/plato3.jpg" alt="Foto 5">
+                    <img src="/assets/img/4.png" alt="aperol spritz" data-bs-target="#galleryCarousel" data-bs-slide-to="0" data-bs-toggle="modal">
                     <div class="overlay">
-                        <span>Foto 5</span>
+                        <span>Aperol Spritz</span>
                     </div>
                 </div>
             </div>
-            <!-- Foto 6 -->
+            <!-- Foto 2 -->
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <img src="/assets/img/plato3.jpg" alt="Foto 6">
+                    <img src="/assets/img/5.png" alt="Gin Tonic" data-bs-target="#galleryCarousel" data-bs-slide-to="1" data-bs-toggle="modal">
                     <div class="overlay">
-                        <span>Foto 6</span>
+                        <span>Gin Tonic</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Modal Carousel -->
+<div class="modal fade" id="galleryCarousel" tabindex="-1" aria-labelledby="galleryCarouselLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="galleryCarouselContent" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/img/asperil.png" class="d-block w-100" alt="aperol spritz">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/2.png" class="d-block w-100" alt="Gin Tonic">
+                        </div>
+                        <div class="carousel-item ">
+                            <img src="/assets/img/3.png" class="d-block w-100" alt="aperol spritz">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/4.png" class="d-block w-100" alt="Gin Tonic">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/5.png" class="d-block w-100" alt="aperol spritz">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/6.png" class="d-block w-100" alt="Gin Tonic">
+                        </div>
+                        <!-- Resto de las imágenes -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarouselContent" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarouselContent" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
   <!-- Footer Section -->
   <footer class="footer bg-dark text-white py-4" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-4 text-center mb-3">
-                <h5>Redes Sociales</h5>
+              
                 <a href="#" class="text-white me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="text-white me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="text-white me-2" aria-label="X"><i class="bi bi-twitter"></i></a>
-            
+                <a href="`https://api.whatsapp.com/send/?phone=$393446131772&text=$hola`" class="text-white me-2" aria-label="X"><i class="bi bi-whatsapp"></i></a>
             </div>
             <div class="col-md-4 text-center mb-3">
                 <h5>Teléfono</h5>
-                <p><i class="bi bi-telephone"></i> +54 9 1234 567890</p>
+                <p><i class="bi bi-telephone"></i> +39 344 613 1772</p>
             </div>
             <div class="col-md-4 text-center mb-3">
-                <h5>Ubicación</h5>
-                <p><i class="bi bi-geo-alt"></i> Calle Ficticia 123, Ciudad, País</p>
+                <h5>Indirizzio</h5>
+                <p><i class="bi bi-geo-alt"></i> Via Fausto Melotti, 6, 20138, Milano</p>
             </div>
         </div>
     </div>
