@@ -1,1 +1,37 @@
  <a class="navbar-brand" href="#"> <img src="/assets/img/logo.svg" alt="" width="80" height="74"></a>
+  <!-- Carousel Section -->
+    <section class="platos-del-dia">
+        <div class="container">
+            <h2 class="platos-title">Platos del Día</h2>
+            <div id="platosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="/assets/img/plato1.jpg" class="d-block w-100" alt="Plato 1">
+                                <p>Asado Especial - $1200</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="/assets/img/plato1.jpg" class="d-block w-100" alt="Plato 3">
+                                <p>Empanadas Norteñas - $500</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#platosCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#platosCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
