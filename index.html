@@ -7,155 +7,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #000000;
-            font-family: 'Arial', sans-serif;
-        }
-        .navbar {
-            background-color: #000000;
-        }
-        .navbar-brand, .nav-link {
-            color: #ffffff !important;
-        }
-        .hero {
-            background-image: url('hero-background.jpg'); /* Cambiar a la ruta de la imagen */
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-        .menu-section {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .menu-section h1 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: #4CAF50; /* Verde */
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .menu-item:hover {
-            background-color: #4CAF50;
-        }
-
-        .menu-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-right: 20px;
-        }
-
-        .menu-item .description {
-            flex: 1;
-            text-align: left;
-        }
-
-        .menu-item .price {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #FFD700; /* Dorado */
-        }
-
-        .menu-item .title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .menu-item .details {
-            font-size: 1em;
-            color: #ccc;
-        }
-
-        .menu-item .price {
-            font-size: 1.4em;
-        }
-        .about-section {
-            padding: 2rem 1rem;
-            background-color: #f9f9f9;
-        }
-        .about-title {
-            font-weight: bold;
-            border-bottom: 2px solid #000;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-        .carousel-inner img {
-            width: 100%;
-            height: auto;
-        }
-        .platos-del-dia {
-            padding: 2rem 1rem;
-        }
-        .platos-title {
-            font-weight: bold;
-            border-bottom: 2px solid #000;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-        .gallery-section {
-            background-color: #000;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .gallery-section h1 {
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: #4CAF50; /* Verde */
-        }
-
-        .gallery-item {
-        position: relative;
-        overflow: hidden;
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-    .gallery-item img:hover {
-        transform: scale(1.05);
-    }
-    .overlay {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        color: #fff;
-        opacity: 0; /* Oculto por defecto */
-        transition: opacity 0.3s ease; /* Transición suave */
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
-    .gallery-item:hover .overlay {
-        opacity: 1; /* Visible al hacer hover */
-    }
-    </style>
+<link href="assets/css/style.css" rel="stylesheet">
+    
+     
 </head>
 <body>
     <!-- Navbar -->
@@ -200,7 +54,7 @@
     <section id="about" class="about-section">
         <div class="container">
             <!--<h2 class="about-title">Quiénes Somos</h2>-->
-            <p>In <strong>Il Norteño</strong>, siamo appassionati di portare i sapori autentici del nord sulla tua tavola. Il nostro ristorante combina ingredienti freschi e naturali con un tocco di eleganza e tradizione. Ogni piatto racconta una storia, e ogni esperienza è pensata per connettere i nostri ospiti con la ricchezza culturale e gastronomica della nostra terra.
+            <p >In <strong>Il Norteño</strong>, siamo appassionati di portare i sapori autentici del nord sulla tua tavola. Il nostro ristorante combina ingredienti freschi e naturali con un tocco di eleganza e tradizione. Ogni piatto racconta una storia, e ogni esperienza è pensata per connettere i nostri ospiti con la ricchezza culturale e gastronomica della nostra terra.
                 Crediamo nella sostenibilità, nel rispetto per la natura e nell'offrire un servizio di eccellenza. Vieni a scoprire un luogo dove la tradizione incontra la modernità
                 </p>
             <!--<div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -228,7 +82,7 @@
             <!-- Foto 1 -->
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <a class="nav-link" href="menu.html#principal"> <img src="/assets/img/asperil.png" alt="aperol spritz" >Principal</a> 
+                    <a  href="menu.html#principal"> <img src="/assets/img/10.png" alt="aperol spritz" >Pasto</a> 
                   
                 </div>
             </div>
@@ -237,24 +91,66 @@
                 <div class="gallery-item">
                     
                     
-                        <a class="nav-link" href="menu.html#aperitivo"><img src="/assets/img/asperil.png" alt="aperol spritz" >Aperitivo</a>
+                        <a  href="menu.html#postres"><img src="/assets/img/12.png" alt="aperol spritz" >Dolce</a>
                     
                 </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <a class="nav-link" href="menu.html#cockteil"> <img src="/assets/img/asperil.png" alt="aperol spritz"> cockteil</a>
+                    <a  href="menu.html#bebidas"> <img src="/assets/img/9.png" alt="aperol spritz">Cocktails</a>
                    
                 </div>
             </div>
             <div class="col-6 col-md-3 mb-4">
                 <div class="gallery-item">
-                    <a class="nav-link" href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >postre</a> 
+                    <a  href="menu.html#cafeteria"><img src="/assets/img/11.png" alt="aperol spritz" >Caffetteria</a> 
                     
                 </div>
             </div>
-
-            <button type="submit" class="btn btn-dark mb-4 "><a class="nav-link" href="menu.html">Vedi tutto</a></button>
+           
+          <!-- <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >Cocktails</a> 
+                    
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >Amari e Grappe</a> 
+                    
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >Vini</a> 
+                    
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >Bibite</a> 
+                    
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >Birre</a> 
+                    
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >Caffetteria</a> 
+                    
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="menu.html#postres"><img src="/assets/img/asperil.png" alt="aperol spritz" >Menu Business</a> 
+                    
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark mb-4 "><a class="nav-link" href="menu.html">Vedi tutto</a></button>-->
 
 </section>
 
@@ -315,28 +211,28 @@
 
    
 <!-- Reservas Section -->
-<section id="reservas" class="reservas-section py-5">
+<section id="reservas" class="reservas-section py-5" style=" background-color: #000; color: #fff; font-style: oblique;">
     <div class="container">
-        <h2 class="text-center mb-4">Reserva tu Mesa</h2>
+        <h2 class="text-center mb-4">Prenota il tuo tavolo</h2>
         <form id="formReserva" class="row g-3">
             <div class="col-md-6">
-                <label for="fecha" class="form-label">Fecha</label>
+                <label for="fecha" class="form-label">Data</label>
                 <input type="date" class="form-control" id="fecha" required>
             </div>
             <div class="col-md-6">
-                <label for="comensales" class="form-label">Cantidad de Comensales</label>
+                <label for="comensales" class="form-label">Numero di commensali</label>
                 <input type="number" class="form-control" id="comensales" min="1" max="20" required>
             </div>
             <div class="col-12">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Tu Nombre" required>
+                <label for="nombre" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Il tuo nome" required>
             </div>
             <div class="col-12">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" placeholder="Tu Teléfono" required>
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Il tuo telefono" required>
             </div>
             <div class="col-12">
-                <button type="button" class="btn btn-dark w-100" id="btnReservar">Reservar</button>
+                <button type="button" class="btn btn-dark w-100" id="btnReservar">Prenotare</button>
             </div>
         </form>
     </div>
@@ -376,28 +272,28 @@ Telefono: ${telefono}
 <!-- Reseñas Section -->
 <section id="reseñas" class="reseñas-section py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Reseñas de Nuestros Clientes</h2>
+        <h2 class="text-center mb-4">Recensioni dei nostri clienti</h2>
         <form id="formularioReseña" class="mb-4">
             <div class="mb-3">
-                <label for="nombreUsuario" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu nombre" required>
+                <label for="nombreUsuario" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nombreUsuario" placeholder="Il tuo nome" required>
             </div>
             <div class="mb-3">
-                <label for="comentario" class="form-label">Tu comentario</label>
-                <textarea class="form-control" id="comentario" rows="4" placeholder="Escribe tu reseña aquí" required></textarea>
+                <label for="comentario" class="form-label">Il tuo commento</label>
+                <textarea class="form-control" id="comentario" rows="4" placeholder="Scrivi la tua recensione qui" required></textarea>
             </div>
             <div class="mb-3">
-                <label for="puntuacion" class="form-label">Puntuación</label>
+                <label for="puntuacion" class="form-label">Punteggiatura</label>
                 <select class="form-select" id="puntuacion" required>
-                    <option value="" disabled selected>Selecciona una puntuación</option>
-                    <option value="1">1 - Muy Malo</option>
-                    <option value="2">2 - Malo</option>
-                    <option value="3">3 - Regular</option>
-                    <option value="4">4 - Bueno</option>
-                    <option value="5">5 - Excelente</option>
+                    <option value="" disabled selected>Seleziona un punteggio</option>
+                    <option value="1">1 - Molto Male</option>
+                    <option value="2">2 - Cattivo</option>
+                    <option value="3">3 - Regolare</option>
+                    <option value="4">4 - Bene</option>
+                    <option value="5">5 - Eccellente</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-dark">Enviar Reseña</button>
+            <button type="submit" class="btn btn-dark">Inviare recensione</button>
         </form>
         <div id="reseñasMostradas">
             <!-- Las reseñas se agregarán aquí dinámicamente -->
@@ -416,7 +312,7 @@ Telefono: ${telefono}
         reseñasGuardadas.forEach(function(reseña) {
             const nuevaReseña = document.createElement('div');
             nuevaReseña.classList.add('reseña', 'mb-3');
-            nuevaReseña.innerHTML = `<p><strong>${reseña.nombre}:</strong> ${reseña.comentario} ${'🌟'.repeat(reseña.puntuacion)}</p>`;
+            nuevaReseña.innerHTML = `<p style="color:black"><strong>${reseña.nombre}:</strong> ${reseña.comentario} ${'🌟'.repeat(reseña.puntuacion)}</p>`;
             contenedorReseñas.appendChild(nuevaReseña);
         });
     }
@@ -568,7 +464,7 @@ Telefono: ${telefono}
     <div class="container">
         <div class="row">
             <div class="col-md-4 text-center mb-3">
-              
+              <h1 style="font-style: oblique;">I nostri social network</h1>
                 <a href="#" class="text-white me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                 <a target="_blank" href="https://www.instagram.com/ilnorteno?igsh=MTY5NDNnb2VjeTA1Zw==" class="text-white me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="text-white me-2" aria-label="X"><i class="bi bi-twitter"></i></a>
