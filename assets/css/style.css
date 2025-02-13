@@ -83,6 +83,15 @@ body {
 .menu-item .price {
     font-size: 1.4em;
 }
+
+.precio {
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+.descripcion {
+    font-style: italic;
+    font-family: 'Arial', sans-serif;
+}
 .about-section {
     padding: 2rem 1rem;
     background-color: black;
