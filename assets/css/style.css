@@ -9,17 +9,57 @@ body {
 .navbar-brand, .nav-link {
     color: #ffffff !important;
 }
+.container-sections {
+    display: flex;
+    flex-direction: column; /* Por defecto, apila las secciones en móviles */
+    align-items: center;
+    gap: 2rem; /* Espaciado entre las secciones */
+}
+
 .hero {
-    background-image: url('hero-background.jpg'); /* Cambiar a la ruta de la imagen */
+    background-image: url('hero-background.jpg'); /* Asegúrate de usar la ruta correcta */
     background-size: cover;
     background-position: center;
-    height: 300px;
+    width: 100%;
+    height: 300px; /* Altura para pantallas pequeñas */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+ 
 }
+
+.about-section {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 992px) { /* A partir de 992px (PC/Laptops) */
+    .container-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide en dos columnas iguales */
+        align-items: center; /* Alinea el contenido verticalmente */
+        gap: 3rem; /* Espaciado entre secciones */
+        margin-bottom: 25px;
+        margin-top: 25px;}
+    
+    
+    .about-section {
+        background-color:#fff ;
+        color: #000000;
+    }
+
+    .hero {
+        height: 400px; /* Más altura en pantallas grandes */
+    }
+}
+
+
 .menu-section {
     background-color: #fff;
     color: white;
