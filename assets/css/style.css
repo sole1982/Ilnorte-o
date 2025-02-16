@@ -198,6 +198,47 @@ border-radius: 5px;
 .gallery-item:hover .overlay {
 opacity: 1; /* Visible al hacer hover */
 }
+.menu-domenica {
+    background-color: #fff7e6; /* Color crema suave */
+    border: 2px solid #ffcc80;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.menu-domenica h2 {
+    color: #d35400;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.menu-domenica h3 {
+    color: #8e44ad;
+    margin-top: 1rem;
+}
+
+.menu-domenica ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-domenica li {
+    margin: 0.5rem 0;
+}
+
+
+.detalle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.aviso {
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 1rem;
+}
 
 
 p{font-family: 'Dancing Script', cursive;letter-spacing: 2px; 
