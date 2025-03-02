@@ -1,0 +1,392 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Restaurante</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+   <style>
+       body {
+        background: url('{% static "img/Antipasti2.svg" %}') repeat;}
+        .logo {
+            margin-top: 50px;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+    </style>
+</head>
+{% block content %}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="{% static 'img/logo2.svg' %}" alt="" width="110px" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Chi Siamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery"> Galleria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reseñas">Recensioni</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contatto</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+   
+    
+    <!-- Hero Section -->
+    <div class="container-sections">
+        <header class="hero">
+            <div class="text-center">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'img/1.png' %}"  alt="" width="100%" height="auto">
+                </a>
+            </div>
+        </header>
+    
+        <section id="about" class="about-section">
+            <div class="container" style="margin: 2px; text-align: center;">
+                <p>
+                    In <strong>Il Norteño</strong>, siamo appassionati di portare i sapori autentici del nord sulla tua tavola. Il nostro ristorante combina ingredienti freschi e naturali con un tocco di eleganza e tradizione. Ogni piatto racconta una storia, e ogni esperienza è pensata per connettere i nostri ospiti con la ricchezza culturale e gastronomica della nostra terra.
+                    
+                </p>
+            </div>
+        </section>
+    </div>
+<!-- Menu section-->
+
+<section id="menu"class="menu-section">
+
+    <h1>Menu</h1>
+    <div class="container">
+        <div class="row">
+            <!-- Foto 1 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="{% url 'menu' %}"> <img src="{% static 'img/10.png' %}"  alt="aperol spritz" >Pasto</a> 
+               
+
+                </div>
+            </div>
+            <!-- Foto 2 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    
+                    
+                        <a  href="{% url 'menu' %}"><img src="{% static 'img/12.png' %}"  alt="aperol spritz" >Dolce</a>
+                    
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="{% url 'menu' %}"> <img src="{% static 'img/9.png' %}"  alt="aperol spritz">Cocktails</a>
+                   
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <div class="gallery-item">
+                    <a  href="{% url 'menu' %}"><img src="{% static 'img/11.png' %}"  alt="aperol spritz" >Caffetteria</a> 
+                    
+                </div>
+            </div>
+  
+            <button type="submit" class="btn btn-dark mb-4 "><a class="nav-link" href="{% url 'menu' %}">Vedi tutto</a></button>
+
+</section>
+
+<section id="about" class="about-section">
+    <div class="container">
+        
+        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/logo2.svg' %}"  class="d-block w-100" alt="Foto 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/logo2.svg' %}" class="d-block w-100" alt="Foto 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/logo2.svg' %}" class="d-block w-100" alt="Foto 3">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+
+
+
+
+    <!-- Plato del dia Section 
+    <section class="menu-section" id="platodia">
+        <h1>Piatti del giorno</h1>
+        <div class="menu-item">
+            <img src="/assets/img/plato3.jpg" alt="Plato 1">
+            <div class="description">
+                <div class="title">Dessert dell  giorno</div>
+                <div class="details">...</div>
+            </div>
+            <div class="price">$...</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="/assets/img/plato3.jpg" alt="Plato 2">
+            <div class="description">
+                <div class="title">“Bucatini all'amatriciana”</div>
+                <div class="details">....</div>.</div>
+            </div>
+            <div class="price">$.</div>
+        </div>
+
+        <div class="menu-item">
+            <img src="/assets/img/plato3.jpg" alt="Plato 3">
+            <div class="description">
+                <div class="title">“FLAN DI VANIGLIA”</div>
+                <div class="details">....</div>
+            </div>
+            <div class="price">$...</div>
+        </div>
+    </section>-->
+
+   
+<!-- Reservas Section -->
+<section id="reservas" class="reservas-section py-5 " style=" background-color: #0000003f; color: #fff; font-style: oblique;">
+    <div class="container mt-2">
+        <h2 class="text-center mb-4">Prenota il tuo tavolo</h2>
+        <form id="formReserva" class="row g-3">
+            <div class="col-md-6">
+                <label for="fecha" class="form-label">Data</label>
+                <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="col-md-6">
+                <label for="comensales" class="form-label">Numero di commensali</label>
+                <input type="number" class="form-control" id="comensales" min="1" max="20" required>
+            </div>
+            <div class="col-12">
+                <label for="nombre" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Il tuo nome" required>
+            </div>
+            <div class="col-12">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Il tuo telefono" required>
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-dark w-100" id="btnReservar">Prenotare</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('btnReservar').addEventListener('click', function() {
+        // Obtener los valores del formulario
+        const fecha = document.getElementById('fecha').value;
+        const comensales = document.getElementById('comensales').value;
+        const nombre = document.getElementById('nombre').value;
+        const telefono = document.getElementById('telefono').value;
+
+        // Validar que todos los campos estén llenos
+        if (!fecha || !comensales || !nombre || !telefono) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
+
+        // Crear el mensaje para WhatsApp
+        const mensaje = `Ciao! Vorrei prenotare un tavolo:
+Data: ${fecha}
+Numero di commensali: ${comensales}
+Nome: ${nombre}
+Telefono: ${telefono}
+È disponibile?`;
+
+        // Enlace para abrir WhatsApp con el mensaje predefinido
+        const numeroWhatsApp = '393446131772'; // Aquí va el número de WhatsApp de tu restaurante (incluye el código del país sin el '+')
+        const url = `https://api.whatsapp.com/send/?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+     
+        window.open(url, '_blank');
+    });
+</script>
+
+
+
+
+<br>
+<section class="gallery-section" id="gallery">
+    <h2 class="text-white">Galería</h2>
+    <div class="row">
+        {% for foto in galeria|slice:"-4:" %}
+        <div class="col-6 col-md-3 mb-4">
+            <div class="gallery-item position-relative" style="border: #fff 1px solid;">
+                <img src="{{ foto.foto.url }}" alt="{{ foto.descripcion }}" class="img-fluid" data-bs-toggle="modal" data-bs-target="#galleryCarousel" data-index="{{ forloop.counter0 }}">
+                <div class="overlay">
+                    <span>{{ foto.descripcion }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+</div>
+
+<!-- Modal Carrusel -->
+<div class="modal fade" id="galleryCarousel" tabindex="-1" aria-labelledby="galleryCarouselLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div id="galleryCarouselContent" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for foto in galeria %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <img src="{{ foto.foto.url }}" class="d-block w-100" alt="{{ foto.descripcion }}">
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarouselContent" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarouselContent" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<section id="reseñas" class="reseñas-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Recensioni dei nostri clienti</h2>
+        <form id="formularioReseña" class="mb-4">
+            <div class="mb-3">
+                <label for="nombreUsuario" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nombreUsuario" placeholder="Il tuo nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="comentario" class="form-label">Il tuo commento</label>
+                <textarea class="form-control" id="comentario" rows="4" placeholder="Scrivi la tua recensione qui" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="puntuacion" class="form-label">Punteggiatura</label>
+                <select class="form-select" id="puntuacion" required>
+                    <option value="" disabled selected>Seleziona un punteggio</option>
+                    <option value="1">1 - Molto Male</option>
+                    <option value="2">2 - Cattivo</option>
+                    <option value="3">3 - Regolare</option>
+                    <option value="4">4 - Bene</option>
+                    <option value="5">5 - Eccellente</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-dark">Inviare recensione</button>
+        </form>
+        <div id="reseñasMostradas">
+            Las reseñas se agregarán aquí dinámicamente
+        </div>
+        {% for reseña in reseñas %}
+<div class="card p-3 my-2">
+    <h5>{{ reseña.nombre }} - {{ reseña.puntuacion }}⭐</h5>
+    <h7>{{ reseña.comentario }}</h7>
+</div>
+{% endfor %}
+
+    </div>
+</section>
+<script>
+   document.getElementById("formularioReseña").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let nombreUsuario = document.getElementById("nombreUsuario").value;
+    let comentario = document.getElementById("comentario").value;
+    let puntuacion = document.getElementById("puntuacion").value;
+
+    let formData = new FormData();
+    formData.append("nombreUsuario", nombreUsuario);
+    formData.append("comentario", comentario);
+    formData.append("puntuacion", puntuacion);
+
+    fetch("{% url 'agregar_reseña' %}", {
+        method: "POST",
+        body: formData,
+        headers: {
+            "X-CSRFToken": "{{ csrf_token }}"
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            let reseñasDiv = document.getElementById("reseñasMostradas");
+            let nuevaReseña = `
+                <div class="card p-3 my-2">
+                    <h5>${data.nombre} - ${data.puntuacion}⭐</h5>
+                    <p>${data.comentario}</p>
+                </div>
+            `;
+            reseñasDiv.innerHTML = nuevaReseña + reseñasDiv.innerHTML;
+            document.getElementById("formularioReseña").reset();
+        } else {
+            alert("Error: " + data.error);
+        }
+    })
+    .catch(error => console.error("Error en la solicitud:", error));
+});
+
+</script>
+  
+   <!-- Footer Section -->
+   <footer class="footer  text-white py-4" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center mb-3">
+              <h2 style="font-style: oblique;">I nostri social network</h2>
+                <a href="#" class="text-white me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a target="_blank" href="https://www.instagram.com/ilnorteno?igsh=MTY5NDNnb2VjeTA1Zw==" class="text-white me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-2" aria-label="X"><i class="bi bi-twitter"></i></a>
+                <a href="`https://api.whatsapp.com/send/?phone=$393446131772&text=$hola`" class="text-white me-2" aria-label="X"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <h5>Teléfono</h5>
+                <p><i class="bi bi-telephone"></i> +39 344 613 1772</p>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <h5>Email</h5>
+                <p><i class="bi bi-envelope"></i> ilnorteno019@gmail.com</p>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <h5>Indirizzio</h5>
+                <p><i class="bi bi-geo-alt"></i> Via Fausto Melotti, 6, 20138, Milano</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
